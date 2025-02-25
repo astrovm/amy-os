@@ -7,6 +7,8 @@ log() {
   echo "=== $* ==="
 }
 
+dnf5 install -y @kde-desktop-environment
+
 # RPM packages list
 declare -A RPM_PACKAGES=(
   ["fedora"]="\
@@ -14,11 +16,9 @@ declare -A RPM_PACKAGES=(
     aria2 \
     bat \
     bleachbit \
-    coolercontrol \
     eza \
     fd-find \
     fuse-btfs \
-    ghostty \
     gnome-disk-utility \
     gparted \
     isoimagewriter \
@@ -32,7 +32,6 @@ declare -A RPM_PACKAGES=(
     qemu-kvm \
     rclone \
     ripgrep \
-    starship \
     tealdeer \
     thefuck \
     trash-cli \
@@ -43,23 +42,6 @@ declare -A RPM_PACKAGES=(
     yakuake \
     yt-dlp \
     zoxide"
-
-  ["fedora-multimedia"]="\
-    HandBrake-cli \
-    HandBrake-gui \
-    mpv \
-    vlc-plugin-bittorrent \
-    vlc-plugin-ffmpeg \
-    vlc-plugin-gstreamer \
-    vlc-plugin-kde \
-    vlc-plugin-pause-click \
-    vlc-plugin-pipewire \
-    vlc"
-
-  ["rpmfusion-free,rpmfusion-free-updates,rpmfusion-nonfree,rpmfusion-nonfree-updates"]="\
-    audacious \
-    audacious-plugins-freeworld \
-    audacity-freeworld"
 
   ["docker-ce"]="\
     containerd.io \
